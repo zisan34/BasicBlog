@@ -56,7 +56,7 @@ Route::group(['prefix' => 'admin', 'middleware'=>'auth'], function() {
 
     Route::get('/category/{id}',[
     	'uses'=>'CategoriesController@posts',
-    	'as'=>'category.posts']);
+    	'as'=>'category.show']);
 
 	Route::post('/category/store',[
     	'uses'=>'CategoriesController@store',
@@ -161,7 +161,7 @@ Route::get('/',[
 'uses'=>'FrontEndController@index',
 'as'=>'index']);
 
-Route::get('/post/{slug}',[
+Route::get('/post/{id}',[
 'uses'=>'FrontEndController@singlePost',
 'as'=>'post.single']);
 

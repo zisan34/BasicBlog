@@ -39,7 +39,7 @@
 @foreach($categories as $category)
 
 <tr>
-	<td><a href="{{route('category.posts',['id'=>$category->id])}}">{{$category->name}}</a>
+	<td><a href="{{route('category.show',['id'=>$category->id])}}">{{$category->name}}</a>
 		 ({{count($category->posts)}})</td>
 	<td><a href="{{ route('category.edit',['id'=>$category->id]) }}" class="btn btn-xs btn-info">Edit</a></td>
 	<td><a href="{{ route('category.delete',['id'=>$category->id]) }}" onclick="return confirm('Are you sure?')" class="btn btn-xs btn-danger">Delete</a></td>

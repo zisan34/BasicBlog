@@ -19,7 +19,7 @@
     <a href="{{$first_post->featured}}" class="link-image js-zoom-image">
         <i class="seoicon-zoom"></i>
     </a>
-    <a href="{{ route('post.single',['slug'=>$first_post->slug]) }}" class="link-post">
+    <a href="{{ route('post.single',['id'=>encrypt($first_post->id)]) }}" class="link-post">
         <i class="seoicon-link-bold"></i>
     </a>
 </div>
@@ -29,7 +29,7 @@
     <div class="post__content-info">
 
             <h2 class="post__title entry-title text-center">
-                <a href="{{ route('post.single',['slug'=>$first_post->slug]) }}">{{$first_post->title}}</a>
+                <a href="{{ route('post.single',['id'=>encrypt($first_post->id)]) }}">{{$first_post->title}}</a>
             </h2>
 
             <div class="post-additional-info">
@@ -51,7 +51,7 @@
 
                 <span class="post__comments">
                     <a href="#"><i class="fa fa-comment-o" aria-hidden="true"></i></a>
-                    <a href="{{ route('post.single',['slug'=>$first_post->slug])}}#disqus_thread"></a>
+                    <a href="{{ route('post.single',['id'=>$first_post->id])}}#disqus_thread"></a>
                 </span>
 
             </div>
@@ -73,7 +73,7 @@
                     <a href="{{$second_post->featured}}" class="link-image js-zoom-image">
                         <i class="seoicon-zoom"></i>
                     </a>
-                    <a href="{{ route('post.single',['slug'=>$second_post->slug]) }}" class="link-post">
+                    <a href="{{ route('post.single',['id'=>encrypt($second_post->id)]) }}" class="link-post">
                         <i class="seoicon-link-bold"></i>
                     </a>
                 </div>
@@ -83,7 +83,7 @@
                     <div class="post__content-info">
 
                             <h2 class="post__title entry-title text-center  ">
-                                <a href="{{ route('post.single',['slug'=>$second_post->slug]) }}">{{$second_post->title}}</a>
+                                <a href="{{ route('post.single',['id'=>encrypt($second_post->id)]) }}">{{$second_post->title}}</a>
                             </h2>
 
                             <div class="post-additional-info">
@@ -105,7 +105,7 @@
 
                                 <span class="post__comments">
                                     <a href="#"><i class="fa fa-comment-o" aria-hidden="true"></i></a>
-                                    <a href="{{ route('post.single',['slug'=>$second_post->slug])}}#disqus_thread"></a>
+                                    <a href="{{ route('post.single',['id'=>$second_post->id])}}#disqus_thread"></a>
                                 </span>
 
                             </div>
@@ -123,7 +123,7 @@
                     <a href="{{$third_post->featured}}" class="link-image js-zoom-image">
                         <i class="seoicon-zoom"></i>
                     </a>
-                    <a href="{{ route('post.single',['slug'=>$third_post->slug]) }}" class="link-post">
+                    <a href="{{ route('post.single',['id'=>encrypt($third_post->id)]) }}" class="link-post">
                         <i class="seoicon-link-bold"></i>
                     </a>
                 </div>
@@ -133,7 +133,7 @@
                     <div class="post__content-info">
 
                             <h2 class="post__title entry-title text-center ">
-                                <a href="{{ route('post.single',['slug'=>$third_post->slug]) }}">{{$third_post->title}}</a>
+                                <a href="{{ route('post.single',['id'=>encrypt($third_post->id)]) }}">{{$third_post->title}}</a>
                             </h2>
 
                             <div class="post-additional-info">
@@ -155,7 +155,7 @@
 
                                 <span class="post__comments">
                                     <a href="#"><i class="fa fa-comment-o" aria-hidden="true"></i></a>
-                                    <a href="{{ route('post.single',['slug'=>$third_post->slug]) }}#disqus_thread"></a>
+                                    <a href="{{ route('post.single',['id'=>$third_post->id]) }}#disqus_thread"></a>
                                 </span>
 
                             </div>
@@ -194,7 +194,7 @@
                                     <div class="case-item__thumb">
                                         <img src="{{$post->featured}}" alt="{{$post->title}}">
                                     </div>
-                                    <h6 class="case-item__title"><a href="{{ route('post.single',['slug'=>$post->slug]) }}">{{$post->title}}</a></h6>
+                                    <h6 class="case-item__title"><a href="{{ route('post.single',['id'=>encrypt($post->id)]) }}">{{$post->title}}</a></h6>
                                 </div>
                             </div>
                 @endforeach

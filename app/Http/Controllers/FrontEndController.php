@@ -48,9 +48,10 @@ class FrontEndController extends Controller
         ->with('tags',Tag::all());
     }
 
-    public function singlePost($slug)
+    public function singlePost($id)
     {
-        $post=Post::where('slug',$slug)->first();
+        $id=decrypt($id);
+        $post=Post::find($id);
         if(count($post)>0)
         {
         $next_id=Post::where('id','>',$post->id)->min('id');

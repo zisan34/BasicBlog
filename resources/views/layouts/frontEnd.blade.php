@@ -19,6 +19,8 @@
     <link rel="stylesheet" type="text/css" href="{{asset('app/css/primary-menu.css')}}">
     <link rel="stylesheet" type="text/css" href="{{asset('app/css/magnific-popup.css')}}">
 
+    @yield('styles')
+
     <!--Styles for RTL-->
 
     <!--<link rel="stylesheet" type="text/css" href="app/css/rtl.css">-->
@@ -180,6 +182,8 @@
 <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-5c7c2d4d8a870877"></script>
 
 {{-- share end --}}
+
+@yield('scripts')
 
 </body>
 </html>
